@@ -1,0 +1,5 @@
+# Set scrollback higher than default so I can scroll back for long texts and such
+defscrollback 1000000
+
+# Hardstatus line with a blue background that displays time and names of each tab
+hardstatus alwayslastline "%{= bw} %{= bc}[%{-}%0c%{= bc}]%{-} [%-Lw%{= bW}%{+b}%50>%n%f* %t%{-b}%{= bw}%+Lw]%<"
