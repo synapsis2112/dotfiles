@@ -30,5 +30,13 @@ setopt inc_append_history
 # This is useful because I ctrl-r a lot.
 setopt share_history
 
-# Adds color to my ls command
-alias ls='ls -alrtFG'
+# Add /usr/local/sbin to my PATH since things like iftop get installed there
+export PATH=$PATH:/usr/local/sbin
+
+# Aliases
+alias ls='ls -alrtF --color=auto'
+alias ps='ps -eo user,pid,ppid,pcpu,rss,vsz,command'
+if [ $(uname -s) = Darwin ]; then
+  alias ls='ls -alrtFG'
+  alias ps='ps -axo user,pid,ppid,%cpu,rss,vsz,command'
+fi
