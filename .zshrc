@@ -35,8 +35,8 @@ export PATH=$PATH:/usr/local/sbin
 
 # Aliases
 alias ls='ls -alrtF --color=auto'
-alias ps='ps -eo user,pid,ppid,pcpu,rss,vsz,command'
+alias ps='ps -eo user,pid,ppid,pcpu,time,rss,vsz,command'
 if [ $(uname -s) = Darwin ]; then
   alias ls='ls -alrtFG'
-  alias ps='ps -axo user,pid,ppid,%cpu,rss,vsz,command'
+  alias ps='ps -axo user,pid,ppid,%cpu,time,rss,vsz,command'
 fi
