@@ -4,7 +4,9 @@ set shiftwidth=4    " indents will have width of 4
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set expandtab       " turns tabs into spaces
-set smarttab        " keeps indents at same column as previous indent
+set smarttab        " inserts shiftwidth amount of lines at beginning of blank line when tab pressed
+set autoindent      " keeps indents at same column as previous indent
+set smartindent     " auto indents after certain characters like '{'
 set number          " show line numbers
 set showcmd         " show command in bottom bar
 set cursorline      " highlight current line
